@@ -1,0 +1,22 @@
+● httpd.service - The Apache HTTP Server
+     Loaded: loaded (/usr/lib/systemd/system/httpd.service; enabled; preset: disabled)
+     Active: active (running) since Wed 2026-11-25 12:56:43 CET; 19min ago
+ Invocation: ffa3e0a20d224a5a9ace919033a16d92
+       Docs: man:httpd.service(8)
+   Main PID: 9079 (httpd)
+     Status: "Total requests: 6; Idle/Busy workers 100/0;Requests/sec: 0.00507; Bytes served/sec:  12 B/sec"
+      Tasks: 177 (limit: 22575)
+     Memory: 14.6M (peak: 14.8M)
+        CPU: 2.929s
+     CGroup: /system.slice/httpd.service
+             ├─9079 /usr/sbin/httpd -DFOREGROUND
+             ├─9080 /usr/sbin/httpd -DFOREGROUND
+             ├─9081 /usr/sbin/httpd -DFOREGROUND
+             ├─9082 /usr/sbin/httpd -DFOREGROUND
+             └─9083 /usr/sbin/httpd -DFOREGROUND
+
+nov. 25 12:56:42 rhel10 systemd[1]: Starting httpd.service - The Apache HTTP Server...
+nov. 25 12:56:42 rhel10 (httpd)[9079]: httpd.service: Referenced but unset environment variable evaluates to an empty string: OPTIONS
+nov. 25 12:56:43 rhel10 httpd[9079]: AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using fe80::20c:29ff:fed4:b9f6%ens160. Set the 'ServerName' directive globally to suppress this message
+nov. 25 12:56:43 rhel10 httpd[9079]: Server configured, listening on: port 80
+nov. 25 12:56:43 rhel10 systemd[1]: Started httpd.service - The Apache HTTP Server.
