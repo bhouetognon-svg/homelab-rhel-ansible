@@ -1,0 +1,30 @@
+---
+- name: Serveur web Apache sur RHEL
+  hosts: rhel
+  become: true
+  tasks:
+    - name: Installer httpd
+      ansible.builtin.dnf:
+        name: httpd
+        state: present
+
+    - name: Démarrer et activer httpd
+      ansible.builtin.service:
+        name: httpd
+        state: started
+        enabled: true
+
+    - name: Ouvrir le service http dans firewalld
+      ansible.posix.firewalld:
+        service: http
+        permanent: true
+        immediate: true
+        state: enabled
+
+    - name: Déployer la page d'accueil
+      ansible.builtin.copy:
+        content: "<h1>Homelab RHEL 10 - BTS SIO SISR (déployé avec Ansible)</h1>\n"
+        dest: /var/www/html/index.html
+        owner: root
+        group: root
+        mode: "0644"
