@@ -1,0 +1,10 @@
+HTTP/1.1 200 OK
+Date: Thu, 26 Nov 2026 08:45:38 GMT
+Server: Apache/2.4.63 (Red Hat Enterprise Linux)
+Last-Modified: Wed, 25 Nov 2026 21:49:37 GMT
+ETag: "1e-66120cda1fc45"
+Accept-Ranges: bytes
+Content-Length: 30
+Content-Type: text/html; charset=UTF-8
+
+<h1>Page de test SELinux</h1>

@@ -1,0 +1,5 @@
+----
+time->Thu Nov 26 09:25:00 2026
+type=PROCTITLE msg=audit(1795681500.299:236): proctitle=2F7573722F7362696E2F6874747064002D44464F524547524F554E44
+type=SYSCALL msg=audit(1795681500.299:236): arch=c000003e syscall=257 success=no exit=-13 a0=ffffff9c a1=7fdbac013ae0 a2=80000 a3=0 items=0 ppid=1258 pid=1453 auid=4294967295 uid=48 gid=48 euid=48 suid=48 fsuid=48 egid=48 sgid=48 fsgid=48 tty=(none) ses=4294967295 comm="httpd" exe="/usr/sbin/httpd" subj=system_u:system_r:httpd_t:s0 key=(null)
+type=AVC msg=audit(1795681500.299:236): avc:  denied  { read } for  pid=1453 comm="httpd" name="test-selinux.html" dev="dm-0" ino=51659608 scontext=system_u:system_r:httpd_t:s0 tcontext=unconfined_u:object_r:user_home_t:s0 tclass=file permissive=0
