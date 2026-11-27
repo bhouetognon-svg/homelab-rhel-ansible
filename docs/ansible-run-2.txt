@@ -1,0 +1,21 @@
+
+PLAY [Serveur web Apache sur RHEL] *********************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [rhel10]
+
+TASK [Installer httpd] *********************************************************
+ok: [rhel10]
+
+TASK [Démarrer et activer httpd] ***********************************************
+ok: [rhel10]
+
+TASK [Ouvrir le service http dans firewalld] ***********************************
+ok: [rhel10]
+
+TASK [Déployer la page d'accueil] **********************************************
+ok: [rhel10]
+
+PLAY RECAP *********************************************************************
+rhel10                     : ok=5    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
